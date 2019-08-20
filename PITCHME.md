@@ -593,7 +593,7 @@ Note:
 @box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br>&nbsp;</span></p>)
 <br>
 
-@box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" >&nbsp;</span></p>)
+@box[bg-black text-white  my-box-pad2  ](<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">&nbsp;&nbsp;bash$ . RunQemu.sh &nbsp;&nbsp;   <br></span></p>)
 @snapend
 
 
@@ -617,9 +617,6 @@ Copy the OVMF.fd BIOS image to the run-ovmf directory naming it bios.bin
 Run the RunQemu.sh Linux shell script
 </span></p>
 <br>
-<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
-&nbsp;&nbsp;bash$ . RunQemu.sh &nbsp;&nbsp;   <br>
-</span></p>
 @snapend
 
  
