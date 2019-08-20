@@ -588,12 +588,11 @@ Note:
 <br>
 <br>
 <br>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>&nbsp;
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
 </span></p>
-@box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br>&nbsp;</span></p>)
+@box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br>&nbsp;</span></p>)
+<br>
 
-<p style="line-height:50%" align="left" ><span style="font-size:0.7em;" >&nbsp;
-</span></p>
 @box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" >&nbsp;</span></p>)
 @snapend
 
@@ -617,6 +616,7 @@ Copy the OVMF.fd BIOS image to the run-ovmf directory naming it bios.bin
 <p style="line-height:50%" align="left" ><span style="font-size:0.7em;" ><br>
 Run the RunQemu.sh Linux shell script
 </span></p>
+<br>
 <p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
 &nbsp;&nbsp;bash$ . RunQemu.sh &nbsp;&nbsp;   <br>
 </span></p>
@@ -630,12 +630,11 @@ Note:
 ---  
 @title[Summary]
 ##### <p align="center"<span class="gold"   >Summary </span></p><br>
-
+<br>
  @fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Build a EDK II Platform using OVMF package </span><br><br>
  @fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Run Ovmf using Qemu </span><br><br>
  
-@snap[midpoint span-10 ]
-<br>
+@snap[midpoint span-5 ]
 ![QemuLogo](/assets/images/Qemu-logo.png)
 @snapend
  
