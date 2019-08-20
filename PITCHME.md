@@ -104,7 +104,7 @@ Note:
 <p align="right"><span class="gold" >@size[1.1em](<b>Pre-requisites Clear Linux* Project   </b>)</span><span style="font-size:0.75em;" >  </span></p>
 <p style="line-height:75%" align="left" ><span style="font-size:0.75em;" >
 &bull; &nbsp; Example Using Clear Linux&ast; Project <br>
-&bull; &nbsp; The following need to be accessible for building Edk2, From the terminal prompt (Cnt-Alt-T):
+&bull; &nbsp; The following need to be accessible for building Edk2:<br>
 </span></p>
 ```bash
 bash$  sudo swupd bundle-add devpkg-util-linux
