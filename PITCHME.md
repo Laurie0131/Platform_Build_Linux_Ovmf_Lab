@@ -52,8 +52,7 @@ Note:
  @fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Build a EDK II Platform using OVMF package </span><br><br>
  @fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Run Ovmf using Qemu </span><br><br>
  
-@snap[middle span-10 ]
-<br>
+@snap[midpoint span-5 ]
 ![trainingLogo](/assets/images/Qemu-logo.png)
 @snapend
  
@@ -67,7 +66,7 @@ Note:
 <span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setup OvmfPkg to build and run w/ QEMU </span>
 
 
----?image=/assets/images/slides/Slide4.JPG
+---
 @title[Ubuntu 16.04 Pre-requisites]
 <p align="right"><span class="gold" >@size[1.1em](<b>Pre-requisites Ubuntu 16.04   </b>)</span><span style="font-size:0.75em;" >  </span></p>
 Instructions from:<a href="https://github.com/tianocore/tianocore.github.io/wiki/Using-EDK-II-with-Native-GCC#Ubuntu_1604_LTS__Ubuntu_1610 "> tianocore wiki Ubuntu_1610</a> 
@@ -92,9 +91,13 @@ bash$ sudo apt-get install qemu
 ; Qemu – Emulation with Intel architecture with UEFI Shell 
 ```
 
+@snap[south-east span-5 ]
+![Logo](/assets/images/ubuntu-logo.png)
+@snapend
+
 Note:
 
----?image=/assets/images/slides/Slide4.JPG
+---
 @title[Pre-requisites Clear Linux Project OS ]
 <p align="right"><span class="gold" >@size[1.1em](<b>Pre-requisites Clear Linux* Project   </b>)</span><span style="font-size:0.75em;" >  </span></p>
 
@@ -104,7 +107,8 @@ Note:
 bash$  sudo swupd bundle-add devpkg-util-linux
 ```
 ```Assembly
-; Devpkg-util-linux – includes bundles for developer tools for writing  “C” Applications included:
+; Devpkg-util-linux – includes bundles for developer tools for 
+; writing  “C” Applications included:
 ;    gcc, nasm, uuid, etc.
 ```
 
@@ -114,6 +118,15 @@ bash$  sudo swupd bundle-add kvm-host
 ```Assembly
 ; Qemu – Emulation with Intel architecture with UEFI Shell 
 ```
+
+
+@snap[south-east span-5 ]
+![Logo](/assets/images/ClearLinux-logo.png)
+@snapend
+
+
+
+
 Note:
 
 
@@ -133,14 +146,31 @@ bash$ cd run-ovmf
 ```bash
 bash$ mkdir hda-contents
 ```
-<span style="font-size:0.75em" >3. Create a Linux shell script to run the QEMU from the run-ovmf directory </span>
-```bash
-bash$ gedit RunQemu.sh
+<span style="font-size:0.75em" >3. Create a Linux shell script to run the QEMU from the run-ovmf directory, 
+<font face="Consolas">@size[.7em](&nbsp;&nbsp;gedit RunQemu.sh &nbsp;&nbsp;&nbsp;&nbsp;) </font></span>
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:34%" align="left" ><span style="font-size:0.35em; font-family:Consolas;">
+<font color="black"><br><br>
+&nbsp;qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log -global isa-debugcon.iobase=0x402 <br>
+</font>
+</span></p>
+@snapend
 
 
-qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log -global isa-debugcon.iobase=0x402 
-```
-<span style="font-size:0.75em" >4. Save and Exit</span>
+@snap[south-west span-100 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.75em;" >4.  <b>Save</b> and <b>exit</b>
+</span></p>
+@snapend
+
 
 Note:
 Create a run-ovmf directory under the home directory
@@ -261,7 +291,7 @@ bash$ git clone https://github.com/tianocore-training/Lab_Material_FW.git
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:80%" align="left"><span style="font-size:0.80em;  " >1. Extract the Downloaded `Lab_Material_FW-master.zip` to `Home` &lpar; this will create a directory `FW`&rpar; </span></p>
+<p style="line-height:70%" align="left"><span style="font-size:0.750em;  " >1. Extract the Downloaded <font face="Consolas">Lab_Material_FW-master.zip</font> to Home @size[.7em](&lpar; this will create a directory FW&rpar;) </span></p>
 <br>
 @snapend
 
@@ -303,14 +333,14 @@ bash$ mkdir ~src
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
-&nbsp; 5. Rename or `mv` the direcotry "`~src/edk2/BaseTools`"<br><font face="Consolas"><span style="background-color: #000000; font-size:0.650em;"> 
+<p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
+&nbsp; 5. Rename or `mv` the direcotry "`~src/edk2/BaseTools`"<br><font face="Consolas"><span style="background-color: #000000; "> 
 @size[.7em](&nbsp;&nbsp;bash$ cd ~src/edk2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
 @size[.7em](&nbsp;&nbsp;bash$ mv BaseTools BaseToolsX &nbsp;&nbsp;&nbsp;<br>)
 @size[.7em](&nbsp;&nbsp;bash$ tar -xf BaseTools.tar.xz  &nbsp;&nbsp;)
 </span></font>
 <br><br>
-&nbsp; 6. Extract the file <font face="Consolas">~FW/edk2Linux/BaseTools.tar.gz  to  ~src/edk2-ws/edk2</font>
+&nbsp; 6. Extract the file <font face="Consolas">@size[.7em](~FW/edk2Linux/BaseTools.tar.gz  to  ~src/edk2-ws/edk2)</font>
 </span></p>
 <br>
 @snapend
@@ -331,8 +361,7 @@ Note:
 
 @snap[north-west span-100 ]
 <br>
-<br>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
 &nbsp; 7. Export work space & platform path
 <br>
 <span style="background-color: #000000"><font face="Consolas">
@@ -342,7 +371,7 @@ Setup the local environment: (see batch file setenv.bat )<br>
 <span style="background-color: #000000"><font face="Consolas">
 @size[.7em](&nbsp;&nbsp;bash$ cd ~src/edk2-ws&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
 @size[.7em](&nbsp;&nbsp;bash$ export WORKSPACE=$PWD &nbsp;&nbsp;  </font></span> <br>)
-@size[.7em](&nbsp;&nbsp;bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc &nbsp;&nbsp;  </font></span> <br>)
+@size[.7em](&nbsp;&nbsp;bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc &nbsp;&nbsp; ) </font></span> <br>
 </span></p>
 <br>
 @snapend
@@ -355,15 +384,18 @@ Setup the local environment: (see batch file setenv.bat )<br>
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 &nbsp; 8. Run Make
 <br>
 <span style="background-color: #000000"><font face="Consolas">
-@size[.7em](&nbsp;&nbsp;bash$ cd edk2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
-@size[.7em](&nbsp;&nbsp;bash$ make -C BaseTools/ &nbsp;&nbsp;  </font></span> <br>)
-</font></span> <br>
+@size[.7em](&nbsp;&nbsp;bash$ cd edk2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
+@size[.7em](&nbsp;&nbsp;bash$ make -C BaseTools/ &nbsp;&nbsp; ) </font></span> <br>
 <br>
-Make sure the test pass OK
+<br>
+@size[.7em](Make sure the test pass OK)
 </span></p>
 <br>
 @snapend
@@ -386,7 +418,7 @@ bash$ . edksetup.sh
 ---?image=assets/images/binary-strings-black2.jpg
 @title[Build Ovmf sub Section]
 <br><br><br><br><br>
-## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B </span>
+## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Build OVMF  Platform</span>
 <span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lab_Material_FW.zip</span>
 
 
@@ -404,12 +436,12 @@ Open Virtual Machine Firmware - Build with edk2
 </span></p>
 <p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
 <span style="background-color: #000000">
-&nbsp;&nbsp;bash$ cd ~/src/edk-ws/edk2 &nbsp;&nbsp;   <br>
+&nbsp;&nbsp;bash$ cd ~/src/edk-ws/edk2 &nbsp;&nbsp;&nbsp;&nbsp;    <br>
 &nbsp;&nbsp;bash$ . edksetup.sh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <br>
 </span>
 </span></p>
 
-<p style="line-height:50%" align="left" ><span style="font-size:0.7em;" ><br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.7em;" ><br><br>
 <b>Edit</b> the file <font face="Consolas">Conf/target.txt</font> @size[.7em](&lpar;change TOOL_CHAIN_TAG&rpar;<br>)
 <font face="Consolas">@size[.7em](&nbsp; gedit Conf/target.txt )</font>
 </span></p>
@@ -499,6 +531,12 @@ Finished build
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </span></p>
 @snapend
 
@@ -531,29 +569,29 @@ Note:
 @title[Build Ovmf Edk2 -invoke QEMU]
 ### <p align="right"><span class="gold" >Invoke QEMU</span><br></span></p>
 <span style="font-size:0.75em" >Change to run-ovmf directory under the home directory</span>
-<div class="left1">
-<pre class='bash'>
-```
- bash$ cd $HOME/run-ovmf
-```
-</pre>
-<span style="font-size:0.75em" >Copy the OVMF.fd BIOS image to the run-ovmf directory naming it bios.bin</span>
-<pre class='bash'>
-```
- bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd bios.bin
-```
-</pre>
-<span style="font-size:0.75em" >Run the RunQemu.sh Linux shell script</span>
-<pre class='bash'>
-```
-bash$ . RunQemu.sh
-```
-</pre>
-<span style="font-size:0.75em" >QEMU will start and boot to the shell</span>
-</div>
-<div class="right1">
-<span style="font-size:0.8em" >&nbsp;  </span>
-</div>
+
+
+@snap[north-west span-60 ]
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Copy the OVMF.fd BIOS image to the run-ovmf directory naming it bios.bin
+</span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+<span style="background-color: #000000">
+&nbsp;&nbsp;bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd bios.bin &nbsp;&nbsp;   <br>
+</span>
+</span></p>
+
+<p style="line-height:50%" align="left" ><span style="font-size:0.7em;" >
+Run the RunQemu.sh Linux shell script
+</span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+<span style="background-color: #000000">
+&nbsp;&nbsp;bash$ . RunQemu.sh &nbsp;&nbsp;   <br>
+</span>
+</span></p>
+@snapend
+
  
 
 
