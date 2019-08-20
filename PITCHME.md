@@ -91,7 +91,7 @@ bash$ sudo apt-get install qemu
 ; Qemu – Emulation with Intel architecture with UEFI Shell 
 ```
 
-@snap[south-east span-5 ]
+@snap[south-east span-10 ]
 ![Logo](/assets/images/ubuntu-logo.png)
 @snapend
 
@@ -120,7 +120,7 @@ bash$  sudo swupd bundle-add kvm-host
 ```
 
 
-@snap[south-east span-5 ]
+@snap[south-east span-10 ]
 ![Logo](/assets/images/ClearLinux-logo.png)
 @snapend
 
@@ -146,7 +146,7 @@ bash$ cd run-ovmf
 ```bash
 bash$ mkdir hda-contents
 ```
-<span style="font-size:0.75em" >3. Create a Linux shell script to run the QEMU from the run-ovmf directory, 
+<span style="font-size:0.75em" >3. Create a shell script to run the QEMU,  
 <font face="Consolas">@size[.7em](&nbsp;&nbsp;gedit RunQemu.sh &nbsp;&nbsp;&nbsp;&nbsp;) </font></span>
 
 @snap[north-west span-100 ]
@@ -158,9 +158,12 @@ bash$ mkdir hda-contents
 <br>
 <br>
 <br>
+<br>
+<br>
 <p style="line-height:34%" align="left" ><span style="font-size:0.35em; font-family:Consolas;">
 <font color="black"><br><br>
-&nbsp;qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log -global isa-debugcon.iobase=0x402 <br>
+&nbsp;qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-global isa-debugcon.iobase=0x402 <br>
 </font>
 </span></p>
 @snapend
@@ -291,7 +294,7 @@ bash$ git clone https://github.com/tianocore-training/Lab_Material_FW.git
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:70%" align="left"><span style="font-size:0.750em;  " >1. Extract the Downloaded <font face="Consolas">Lab_Material_FW-master.zip</font> to Home @size[.7em](&lpar; this will create a directory FW&rpar;) </span></p>
+<p style="line-height:70%" align="left"><span style="font-size:0.750em;  " >1. Extract the Downloaded <font face="Consolas">Lab_Material_FW-master.zip</font> to Home @size[.7em](<br>&lpar; this will create a directory FW&rpar;) </span></p>
 <br>
 @snapend
 
@@ -334,13 +337,13 @@ bash$ mkdir ~src
 <br>
 <br>
 <p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
-&nbsp; 5. Rename or `mv` the direcotry "`~src/edk2/BaseTools`"<br><font face="Consolas"><span style="background-color: #000000; "> 
-@size[.7em](&nbsp;&nbsp;bash$ cd ~src/edk2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
+&nbsp; 5. Rename or `mv` the direcotry <font face="Consolas">"~src/edk2/BaseTools"<br><font face="Consolas"><span style="background-color: #000000; "> 
+@size[.7em](&nbsp;&nbsp;bash$ cd ~src/edk2-ws/edk2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
 @size[.7em](&nbsp;&nbsp;bash$ mv BaseTools BaseToolsX &nbsp;&nbsp;&nbsp;<br>)
 @size[.7em](&nbsp;&nbsp;bash$ tar -xf BaseTools.tar.xz  &nbsp;&nbsp;)
 </span></font>
 <br><br>
-&nbsp; 6. Extract the file <font face="Consolas">@size[.7em](~FW/edk2Linux/BaseTools.tar.gz  to  ~src/edk2-ws/edk2)</font>
+&nbsp; 6. Extract <font face="Consolas">@size[.7em](~src/edk2-ws/edk2/BaseTools.tar.xz  to  ~src/edk2-ws/edk2)</font>
 </span></p>
 <br>
 @snapend
@@ -362,15 +365,10 @@ Note:
 @snap[north-west span-100 ]
 <br>
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
-&nbsp; 7. Export work space & platform path
-<br>
-<span style="background-color: #000000"><font face="Consolas">
-@size[.7em](&nbsp;&nbsp;cd  C:&bsol;&gt;FW\edk2-ws &nbsp;&nbsp;&nbsp;&nbsp;) </font></span> <br>
-<br>
-Setup the local environment: (see batch file setenv.bat )<br>
+&nbsp; 7.Export workspace and platform path(see script file setenv.sh )<br>
 <span style="background-color: #000000"><font face="Consolas">
 @size[.7em](&nbsp;&nbsp;bash$ cd ~src/edk2-ws&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
-@size[.7em](&nbsp;&nbsp;bash$ export WORKSPACE=$PWD &nbsp;&nbsp;  </font></span> <br>)
+@size[.7em](&nbsp;&nbsp;bash$ export WORKSPACE=$PWD &nbsp;&nbsp; <br>)
 @size[.7em](&nbsp;&nbsp;bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc &nbsp;&nbsp; ) </font></span> <br>
 </span></p>
 <br>
@@ -395,7 +393,7 @@ Setup the local environment: (see batch file setenv.bat )<br>
 @size[.7em](&nbsp;&nbsp;bash$ make -C BaseTools/ &nbsp;&nbsp; ) </font></span> <br>
 <br>
 <br>
-@size[.7em](Make sure the test pass OK)
+@size[.8em](Make sure the test pass OK)
 </span></p>
 <br>
 @snapend
@@ -457,11 +455,12 @@ Open Virtual Machine Firmware - Build with edk2
 <br>
 <br>
 <br>
-<p style="line-height:34%" align="left" ><span style="font-size:0.35em; font-family:Consolas;">
+<br>
+<p style="line-height:30%" align="left" ><span style="font-size:0.35em; font-family:Consolas;">
 <font color="black"><br><br>
 &nbsp;&nbsp;ACTIVE_PLATFORM&nbsp;       = OvmfPkg/OvmfPkgX64.dsc <br>
 &nbsp;&nbsp; &nbsp;&nbsp;. &nbsp;&nbsp;. &nbsp;&nbsp;. <br>
-&nbsp;&nbsp;TARGET_ARCH&nbsp&nbsp;;&nbsp;&nbsp;&nbsp;           = X64 <br>
+&nbsp;&nbsp;TARGET_ARCH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           = X64 <br>
 &nbsp;&nbsp; &nbsp;&nbsp;. &nbsp;&nbsp;. &nbsp;&nbsp;. <br>
 &nbsp;&nbsp;TOOL_CHAIN_TAG &nbsp;&nbsp;       = GCC5 <br>
 </font>
@@ -481,14 +480,14 @@ Open Virtual Machine Firmware - Build with edk2
 @snapend
 
 
-@snap[south-east span-30 fragment ]
+@snap[south span-20 fragment ]
 <p style="line-height:10%" align="left"><span style="font-size:02.80em;  " ><br><br>
 @color[yellow](&#8678;)
 </span></p>
 @snapend
 
 @snap[south-east span-100 ]
-<p align="right"><span style="font-size:0.6em" >More info: <a href=" https://github.com/tianocore/tianocore.github.io/wiki/OVMF "> tianocore - wiki/OVMF </a>
+<p align="right"><span style="font-size:0.56em" >More info: <a href=" https://github.com/tianocore/tianocore.github.io/wiki/OVMF "> tianocore - wiki/OVMF </a>
 </span></p>
 @snapend
 
@@ -572,6 +571,11 @@ Note:
 
 
 @snap[north-west span-60 ]
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 Copy the OVMF.fd BIOS image to the run-ovmf directory naming it bios.bin
