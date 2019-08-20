@@ -163,7 +163,7 @@ QEMU,<font face="Consolas">@size[.7em](&nbsp;gedit RunQemu.sh &nbsp;) </font></s
 <br>
 <br>
 <p style="line-height:25%" align="left" ><span style="font-size:0.35em; font-family:Consolas;">
-<font color="black"><br><br>&num; The following needs to be on a single line
+<font color="black"><br><br><br>&num; The following needs to be on a single line<br>
 &nbsp;<b>qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-global isa-debugcon.iobase=0x402 </b><br>
 </font>
@@ -470,13 +470,13 @@ Open Virtual Machine Firmware - Build with edk2
 <br>
 <br>
 <p style="line-height:30%" align="left" ><span style="font-size:0.35em; font-family:Consolas;">
-<font color="black"><br><br>
+<font color="black"><b><br><br>
 &nbsp;&nbsp;ACTIVE_PLATFORM&nbsp;       = OvmfPkg/OvmfPkgX64.dsc <br>
 &nbsp;&nbsp; &nbsp;&nbsp;. &nbsp;&nbsp;. &nbsp;&nbsp;. <br>
 &nbsp;&nbsp;TARGET_ARCH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           = X64 <br>
 &nbsp;&nbsp; &nbsp;&nbsp;. &nbsp;&nbsp;. &nbsp;&nbsp;. <br>
-&nbsp;&nbsp;TOOL_CHAIN_TAG &nbsp;&nbsp;       = GCC5 <br>
-</font>
+&nbsp;&nbsp;TOOL_CHAIN_TAG &nbsp;       = GCC5 <br>
+</b></font>
 </span></p>
 @snapend
 
@@ -588,9 +588,7 @@ Note:
 <br>
 <br>
 <br>
-<br>
-<br>
-<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>&nbsp;
 </span></p>
 @box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br>&nbsp;</span></p>)
 
@@ -636,9 +634,9 @@ Note:
  @fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Build a EDK II Platform using OVMF package </span><br><br>
  @fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Run Ovmf using Qemu </span><br><br>
  
-@snap[middle span-10 ]
+@snap[midpoint span-10 ]
 <br>
-![trainingLogo](/assets/images/Qemu-logo.png)
+![QemuLogo](/assets/images/Qemu-logo.png)
 @snapend
  
 
