@@ -580,7 +580,10 @@ Note:
 ---?image=/assets/images/slides/Slide18.JPG
 @title[Build Ovmf Edk2 -invoke QEMU]
 ### <p align="right"><span class="gold" >Invoke QEMU</span><br></span></p>
-<span style="font-size:0.75em" >Change to run-ovmf directory under the home directory</span>
+<p style="line-height:60%" align="left" ><span style="font-size:0.75em" >Change to run-ovmf directory under the home directory<br>
+ <font face="Consolas"><span style="background-color: #000000; font-size:0.650em;"> 
+&nbsp;&nbsp;cd $HOME/run-ovmf &nbsp;&nbsp;</span></font>
+</span></p>
 
 
 @snap[north-west span-60 ]
