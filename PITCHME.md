@@ -162,11 +162,10 @@ QEMU,<font face="Consolas">@size[.7em](&nbsp;gedit RunQemu.sh &nbsp;) </font></s
 <br>
 <br>
 <br>
-<br>
-<p style="line-height:34%" align="left" ><span style="font-size:0.35em; font-family:Consolas;">
-<font color="black"><br><br>
-&nbsp;qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-global isa-debugcon.iobase=0x402 <br>
+<p style="line-height:25%" align="left" ><span style="font-size:0.35em; font-family:Consolas;">
+<font color="black"><br><br>&num; The following needs to be on a single line
+&nbsp;<b>qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents -net none     -debugcon file:debug.log <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-global isa-debugcon.iobase=0x402 </b><br>
 </font>
 </span></p>
 @snapend
