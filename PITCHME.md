@@ -592,8 +592,8 @@ Note:
 </span></p>
 @box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br>&nbsp;</span></p>)
 <br>
-
-@box[bg-black text-white  my-box-pad2  ](<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">&nbsp;&nbsp;bash$ . RunQemu.sh &nbsp;&nbsp;   <br></span></p>)
+<br>
+@box[bg-black text-white  my-box-pad2  ](<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">&nbsp;&nbsp;bash$ . RunQemu.sh &nbsp;&nbsp;   <br>&nbsp;</span></p>)
 @snapend
 
 
