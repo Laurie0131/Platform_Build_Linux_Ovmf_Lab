@@ -120,8 +120,10 @@ bash$  sudo swupd bundle-add kvm-host
 ```
 
 
-@snap[south-east span-10 ]
+@snap[south-east span-17 ]
 ![Logo](/assets/images/ClearLinux-logo.png)
+<br>
+
 @snapend
 
 
@@ -146,8 +148,8 @@ bash$ cd run-ovmf
 ```bash
 bash$ mkdir hda-contents
 ```
-<span style="font-size:0.75em" >3. Create a shell script to run the QEMU,  
-<font face="Consolas">@size[.7em](&nbsp;&nbsp;gedit RunQemu.sh &nbsp;&nbsp;&nbsp;&nbsp;) </font></span>
+<p style="line-height:34%" align="left" ><span style="font-size:0.75em" >3. Create a shell script to run the QEMU,  
+<font face="Consolas">@size[.7em](&nbsp;&nbsp;gedit RunQemu.sh &nbsp;&nbsp;&nbsp;&nbsp;) </font></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -338,7 +340,7 @@ bash$ mkdir ~src
 <br>
 <p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
 &nbsp; 5. Rename or `mv` the direcotry <font face="Consolas">"~src/edk2/BaseTools"<br><font face="Consolas"><span style="background-color: #000000; "> 
-@size[.7em](&nbsp;&nbsp;bash$ cd ~src/edk2-ws/edk2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
+@size[.7em](&nbsp;&nbsp;bash$ cd ~src/edk2-ws/edk2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
 @size[.7em](&nbsp;&nbsp;bash$ mv BaseTools BaseToolsX &nbsp;&nbsp;&nbsp;<br>)
 @size[.7em](&nbsp;&nbsp;bash$ tar -xf BaseTools.tar.xz  &nbsp;&nbsp;)
 </span></font>
@@ -362,14 +364,26 @@ Note:
 <span style="font-size:0.75em;" >– Building <font face="Consolas">BaseTools</font>  </span></p>
 
 
-@snap[north-west span-100 ]
+@snap[north-west span-80 ]
+<br>
+<br>
 <br>
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
-&nbsp; 7.Export workspace and platform path(see script file setenv.sh )<br>
-<span style="background-color: #000000"><font face="Consolas">
+<br><br></span></p>
+@box[bg-black text-white my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
+<br>
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
+&nbsp; 7.Export workspace and platform path(see script file setenv.sh )<br><br>
+<font face="Consolas">
 @size[.7em](&nbsp;&nbsp;bash$ cd ~src/edk2-ws&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
 @size[.7em](&nbsp;&nbsp;bash$ export WORKSPACE=$PWD &nbsp;&nbsp; <br>)
-@size[.7em](&nbsp;&nbsp;bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc &nbsp;&nbsp; ) </font></span> <br>
+@size[.7em](&nbsp;&nbsp;bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc &nbsp;&nbsp; ) </font><br>
 </span></p>
 <br>
 @snapend
@@ -384,9 +398,9 @@ Note:
 <br>
 <br>
 <br>
-<br>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 &nbsp; 8. Run Make
+<br>
 <br>
 <span style="background-color: #000000"><font face="Consolas">
 @size[.7em](&nbsp;&nbsp;bash$ cd edk2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>)
@@ -577,22 +591,38 @@ Note:
 <br>
 <br>
 <br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;
+</span></p>
+@box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br>&nbsp;</span></p>)
+
+<p style="line-height:50%" align="left" ><span style="font-size:0.7em;" >&nbsp;
+</span></p>
+@box[bg-black text-white  my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" >&nbsp;</span></p>)
+@snapend
+
+
+
+
+@snap[north-west span-60 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
 Copy the OVMF.fd BIOS image to the run-ovmf directory naming it bios.bin
 </span></p>
 <p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
-<span style="background-color: #000000">
 &nbsp;&nbsp;bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd bios.bin &nbsp;&nbsp;   <br>
 </span>
-</span></p>
+</p>
 
 <p style="line-height:50%" align="left" ><span style="font-size:0.7em;" >
 Run the RunQemu.sh Linux shell script
 </span></p>
 <p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
-<span style="background-color: #000000">
 &nbsp;&nbsp;bash$ . RunQemu.sh &nbsp;&nbsp;   <br>
-</span>
 </span></p>
 @snapend
 
