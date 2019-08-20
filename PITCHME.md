@@ -69,8 +69,8 @@ Note:
 ---
 @title[Ubuntu 16.04 Pre-requisites]
 <p align="right"><span class="gold" >@size[1.1em](<b>Pre-requisites Ubuntu 16.04   </b>)</span><span style="font-size:0.75em;" >  </span></p>
-Instructions from:<a href="https://github.com/tianocore/tianocore.github.io/wiki/Using-EDK-II-with-Native-GCC#Ubuntu_1604_LTS__Ubuntu_1610 "> tianocore wiki Ubuntu_1610</a> 
-<p style="line-height:70%" align="left" ><span style="font-size:0.7em;" >
+<p style="line-height:75%" align="left" ><span style="font-size:0.75em;" >
+Instructions from:<a href="https://github.com/tianocore/tianocore.github.io/wiki/Using-EDK-II-with-Native-GCC#Ubuntu_1604_LTS__Ubuntu_1610 "> tianocore wiki Ubuntu_1610</a> <br>
 &bull; &nbsp; Example Ubuntu 16.04<br>
 &bull; &nbsp; The following need to be accessible for building Edk II Platforms, From the terminal prompt (Cnt-Alt-T) :
 </span></p>
@@ -102,8 +102,8 @@ Note:
 ---
 @title[Pre-requisites Clear Linux Project OS ]
 <p align="right"><span class="gold" >@size[1.1em](<b>Pre-requisites Clear Linux* Project   </b>)</span><span style="font-size:0.75em;" >  </span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.7em;" >
-&bull; &nbsp; Example Using Clear Linux* Project <br>
+<p style="line-height:75%" align="left" ><span style="font-size:0.75em;" >
+&bull; &nbsp; Example Using Clear Linux&ast; Project <br>
 &bull; &nbsp; The following need to be accessible for building Edk2, From the terminal prompt (Cnt-Alt-T):
 </span></p>
 ```bash
